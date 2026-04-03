@@ -1,4 +1,4 @@
-# Spam Message Detector
+# Spam Message
 
 This project is a Machine Learning-based application that classifies messages as **Spam** or **Not Spam (Ham)** using Natural Language Processing (NLP).
 
