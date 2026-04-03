@@ -41,19 +41,32 @@ Input:
 Output:  
 `Spam`
 
-## Future Improvements
-- Convert into web application (Streamlit/Flask)
-- Improve model accuracy
-- Add real-time message detection
-
 ## Screenshot
 <img width="1915" height="590" alt="Screenshot 2026-04-04 012135" src="https://github.com/user-attachments/assets/5c121afe-1b9a-48c1-a08f-c4c31ec05b76" />
 <img width="1912" height="593" alt="Screenshot 2026-04-04 012028" src="https://github.com/user-attachments/assets/0c9799f9-6135-4bd3-a868-6015059a730a" />
 
+## Approach
 
-## Author
-Suraj Mozarkar
+The Spam Message Detection system follows a Machine Learning and NLP-based approach:
 
----
-
-⭐ If you found this project useful, give it a star!
+1. **Data Collection**
+   - The dataset (`spam.csv`) contains labeled messages as Spam or Ham.
+2. **Data Preprocessing**
+   - Remove unnecessary characters, punctuation, and stopwords
+   - Convert text to lowercase
+   - Clean and normalize the text data
+3. **Text Transformation**
+   - Convert text into numerical form using **TF-IDF Vectorization**
+   - This helps the model understand the importance of words
+4. **Model Training**
+   - Train a Machine Learning model (e.g., Naive Bayes / Logistic Regression)
+   - Fit the model on the processed dataset
+5. **Model Saving**
+   - Save the trained model (`model.pkl`)
+   - Save the vectorizer (`vectorizer.pkl`)
+6. **Prediction**
+   - Take user input message
+   - Apply same preprocessing and vectorization
+   - Use trained model to classify as Spam or Not Spam
+7. **Output**
+   - Display result: **Spam** or **Ham**
